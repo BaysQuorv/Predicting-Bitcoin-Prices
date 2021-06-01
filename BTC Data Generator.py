@@ -2,8 +2,14 @@ import ccxt
 import time
 import csv
 
+
+# This program downloads every minute candle since the given
+# UNIX timestamp and writes it to a CSV file.
+# For one million candles, it takes a bit over 30 minutes to download everything.
+
+
 # All UNIX times are in milliseconds
-beginning = int(time.time() - 60 * 10**6) * 1000 # One million minutes ago in UNIX format
+beginning = int(time.time() - 60 * 10 ** 6) * 1000  # One million minutes ago in UNIX format
 now = int(time.time()) * 1000  # UNIX Time right now
 
 # Add every minute to data since "beginning"
