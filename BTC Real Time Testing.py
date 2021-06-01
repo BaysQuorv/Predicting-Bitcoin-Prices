@@ -34,11 +34,7 @@ while True:
         fifty_minute_total += data[-i - 2][4] / data[-i - 3][4]
     normalized_values['fiftyMinuteCloseAvg'] = fifty_minute_total / 50
 
-    # 100 minute close / previous close average
-    one_hundred_minute_total = 0
-    for i in range(100):
-        one_hundred_minute_total += data[-i - 2][4] / data[-i - 3][4]
-    normalized_values['oneHundredMinuteCloseAvg'] = one_hundred_minute_total / 100
+    # Add the 100 minute average here if your model needs it
 
     # Send the webhook
     url = 'Put your webhook destination url here'
